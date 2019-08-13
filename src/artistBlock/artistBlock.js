@@ -5,7 +5,7 @@ import TopTen from './topTenBlock/topTenBlock';
 
 const ArtistBlock = (props) => {
   const {artistData, relatedArtistData, changeArtist, topTenData} = props
-  const artistImage = () => Object.keys(artistData).length !== 0 && !Object.keys(artistData).includes('error') ? artistData.images[1].url : ""
+  const artistImage = () => Object.keys(artistData).length !== 0 && !Object.keys(artistData).includes('error') && artistData.images !== 0 ? artistData.images[1].url : ""
   const artistFollowers = () => Object.keys(artistData).length !== 0 && !Object.keys(artistData).includes('error') ? artistData.followers.total : ""
   const artistPage = () => Object.keys(artistData).length !== 0 && !Object.keys(artistData).includes('error') ? artistData.external_urls.spotify : ""
 
@@ -13,13 +13,13 @@ const ArtistBlock = (props) => {
     <Container textAlign='center'>
       <Grid celled>
         <Grid.Row>
-          <Grid.Column width={13}>
+          <Grid.Column width={12}>
             <Header as='h1'>{artistData.name}</Header>
             <Image src={artistImage()} centered/>
             <h2>{artistData.name} has {artistFollowers()} followers</h2>
             <Button color='green' icon><a href={artistPage()}><Icon name='spotify'></Icon>Artist Page</a></Button>
           </Grid.Column>
-          <Grid.Column width={3}>
+          <Grid.Column width={4}>
             <TopTen topTenData={topTenData}/>
           </Grid.Column>
         </Grid.Row>

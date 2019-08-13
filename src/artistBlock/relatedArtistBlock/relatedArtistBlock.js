@@ -7,18 +7,16 @@ const RelatedArtistBlock = (props) => {
   const relatedArtistList = () => {
     return Object.keys(relatedArtistData).length !== 0 && !Object.keys(relatedArtistData).includes('error') ? relatedArtistData.artists : errorMessage
   }
-  console.log(relatedArtistList(), errorMessage)
   return(
     <Segment textAlign='center'>
       <Header>Related Artists</Header>
-      {"Click on Artist for more information"}
+      {relatedArtistList() !== errorMessage ? "Click on Artist for more information" : null}
       <List horizontal>
-        {(errorMessage !== errorMessage) ? relatedArtistList().map(artist => {
-          console.log(artist)
+        {(relatedArtistList()["0"] && relatedArtistList() !== errorMessage) ? relatedArtistList().map(artist => {
           return (<List.Item key={artist.id} onClick={(e)=>changeArtist(e, artist.id)}>
             {artist.name}
             <br/>
-            <Image src={artist.images[artist.images.length -1].url}/>
+            <Image src={artist.images.length !== 0 ? artist.images[artist.images.length -1].url : ""}/>
           </List.Item>)
         }) :
         <List.Item>{errorMessage[0]}</List.Item>
