@@ -3,7 +3,7 @@ import ArtistBlock from './artistBlock/artistBlock';
 import './App.css';
 
 const clientId = 'b238b8d38645462ab2ae05598e54bdfb';
-const redirectUri = "http://localhost:3000";
+const redirectUri = "https://kinggranger.github.io/fanduelCC/";
 
 const tokenHash = window.location.hash.substring(1)
                   .split("&")
