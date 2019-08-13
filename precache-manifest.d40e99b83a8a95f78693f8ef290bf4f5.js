@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cf53d3bcf2594a0f0a4098264ae02903",
+    "revision": "9d0a5d1f2f01dd62d7c586e2413a9d02",
     "url": "/fanduelCC/index.html"
   },
   {
-    "revision": "f167075d749cb9915083",
+    "revision": "f8504300baefefa4df9e",
     "url": "/fanduelCC/static/css/main.e00c0e49.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fanduelCC/static/js/2.84eb6c65.chunk.js"
   },
   {
-    "revision": "f167075d749cb9915083",
-    "url": "/fanduelCC/static/js/main.8fc1d746.chunk.js"
+    "revision": "f8504300baefefa4df9e",
+    "url": "/fanduelCC/static/js/main.a6d5a1ca.chunk.js"
   },
   {
     "revision": "47a3dceddf57fd97ed67",
